@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Cuenta - EMAUTA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            color: #555;
+        }
+        .steps {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .steps ol {
+            margin-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .data-table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        .data-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .alert-danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        .contact-box p {
+            color: white;
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid white;
+            padding-bottom: 2px;
+        }
+        .contact-box a:hover {
+            opacity: 0.8;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .icon {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            .section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 EMAUTA</h1>
+            <p>Solicitud de Eliminación de Cuenta</p>
+        </div>
+        <div class="content">
+            <div class="section">
+                <h2>Información General</h2>
+                <p>
+                    Esta página te permite solicitar la eliminación permanente de tu cuenta de <strong>EMAUTA</strong>, 
+                    la plataforma educativa con quizzes interactivos y seguimiento de progreso.
+                </p>
+                <div class="alert alert-danger">
+                    <strong>⚠️ Advertencia:</strong> La eliminación de tu cuenta es <strong>permanente e irreversible</strong>. 
+                    Una vez procesada, no podrás recuperar tu cuenta ni tus datos.
+                </div>
+            </div>
+            <div class="section">
+                <h2>Pasos para Solicitar la Eliminación</h2>
+                <div class="steps">
+                    <ol>
+                        <li><strong>Envía un correo electrónico</strong> a nuestro equipo de soporte desde la dirección de correo asociada a tu cuenta EMAUTA.</li>
+                        <li><strong>Asunto del correo:</strong> "Solicitud de Eliminación de Cuenta - EMAUTA"</li>
+                        <li><strong>Incluye en el mensaje:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>Tu nombre completo registrado en la app</li>
+                                <li>Tu correo electrónico de la cuenta</li>
+                                <li>Confirmación explícita: "Solicito la eliminación permanente de mi cuenta"</li>
+                            </ul>
+                        </li>
+                        <li><strong>Envía el correo a:</strong> <a href="mailto:shyckovsoft@gmail.com" style="color: #667eea; font-weight: 600;">shyckovsoft@gmail.com</a></li>
+                        <li><strong>Tiempo de procesamiento:</strong> Tu solicitud será procesada en un plazo máximo de <strong>30 días hábiles</strong>.</li>
+                        <li><strong>Confirmación:</strong> Recibirás un correo de confirmación cuando tu cuenta haya sido eliminada.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Datos que se Eliminarán</h2>
+                <p>Al eliminar tu cuenta, los siguientes datos serán <strong>eliminados permanentemente</strong>:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Dato</th>
+                            <th>Acción</th>
+                            <th>Periodo de Retención</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Información de perfil</strong><br>(Nombre, email, foto)</td>
+                            <td>Eliminado</td>
+                            <td>Inmediato (0 días)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Progreso académico</strong><br>(Quizzes, estadísticas, puntajes)</td>
+                            <td>Eliminado</td>
+                            <td>Inmediato (0 días)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Configuración de la app</strong><br>(Preferencias, notificaciones)</td>
+                            <td>Eliminado</td>
+                            <td>Inmediato (0 días)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Historial de actividad</strong><br>(Sesiones, accesos)</td>
+                            <td>Eliminado</td>
+                            <td>Inmediato (0 días)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Credenciales de autenticación</strong><br>(Contraseña, tokens)</td>
+                            <td>Eliminado</td>
+                            <td>Inmediato (0 días)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <h2>Datos que se Conservan</h2>
+                <p>Por razones legales y de auditoría, los siguientes datos pueden conservarse de forma <strong>anónima</strong>:</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Dato</th>
+                            <th>Motivo de Retención</th>
+                            <th>Periodo Máximo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Registros de transacciones</strong><br>(Si aplicable)</td>
+                            <td>Cumplimiento legal y fiscal</td>
+                            <td>7 años</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Logs de seguridad</strong><br>(Anónimos)</td>
+                            <td>Prevención de fraude</td>
+                            <td>90 días</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estadísticas agregadas</strong><br>(Anónimas)</td>
+                            <td>Análisis de uso de la plataforma</td>
+                            <td>Indefinido</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="alert">
+                    <strong>ℹ️ Nota:</strong> Los datos conservados están completamente anonimizados y no pueden ser vinculados a tu identidad personal.
+                </div>
+            </div>
+            <div class="section">
+                <h2>Consecuencias de la Eliminación</h2>
+                <p>Al eliminar tu cuenta, ten en cuenta que:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li style="margin-bottom: 10px;">✗ Perderás acceso permanente a tu cuenta de EMAUTA</li>
+                    <li style="margin-bottom: 10px;">✗ Se eliminarán todos tus datos de progreso y estadísticas</li>
+                    <li style="margin-bottom: 10px;">✗ No podrás recuperar ninguna información después de la eliminación</li>
+                    <li style="margin-bottom: 10px;">✗ Si deseas volver a usar EMAUTA, deberás crear una nueva cuenta desde cero</li>
+                    <li style="margin-bottom: 10px;">✗ Deberás contactar nuevamente con tu institución educativa para obtener un nuevo código de inscripción (si aplicable)</li>
+                </ul>
+            </div>
+            <div class="contact-box">
+                <h3>📧 Contacto de Soporte</h3>
+                <p><span class="icon">✉️</span> Email: <a href="mailto:shyckovsoft@gmail.com">shyckovsoft@gmail.com</a></p>
+                <p><span class="icon">📱</span> WhatsApp: <a href="https://wa.me/59165116178">+591 65116178</a></p>
+                <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
+                    Horario de atención: Lunes a Viernes, 9:00 AM - 6:00 PM (GMT-4)
+                </p>
+            </div>
+            <div class="section">
+                <h2>Alternativas a la Eliminación</h2>
+                <p>Si estás considerando eliminar tu cuenta, te recomendamos evaluar estas alternativas:</p>
+                <div class="steps">
+                    <ul>
+                        <li><strong>Desactivación temporal:</strong> Puedes dejar de usar la app sin eliminar tu cuenta. Tus datos se conservarán para cuando decidas regresar.</li>
+                        <li><strong>Cambio de configuración:</strong> Ajusta las notificaciones y preferencias de privacidad en la app.</li>
+                        <li><strong>Soporte técnico:</strong> Si tienes problemas con la app, contáctanos. Podemos ayudarte a resolverlos.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Preguntas Frecuentes</h2>
+                
+                <h3>¿Cuánto tiempo tarda el proceso de eliminación?</h3>
+                <p>El proceso completo puede tomar hasta 30 días hábiles desde que recibimos tu solicitud.</p>
+                <h3>¿Puedo cancelar mi solicitud de eliminación?</h3>
+                <p>Sí, puedes cancelar tu solicitud enviando otro correo a <a href="mailto:shyckovsoft@gmail.com" style="color: #667eea;">shyckovsoft@gmail.com</a> antes de que se complete el proceso.</p>
+                <h3>¿Qué pasa si tengo una suscripción activa?</h3>
+                <p>Debes cancelar cualquier suscripción activa antes de solicitar la eliminación de tu cuenta. Las suscripciones no se cancelan automáticamente.</p>
+                <h3>¿Puedo crear una nueva cuenta después de eliminar la anterior?</h3>
+                <p>Sí, puedes crear una nueva cuenta en cualquier momento usando un correo electrónico diferente o el mismo después de 30 días.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2025 EMAUTA - Plataforma Educativa</p>
+            <p style="margin-top: 10px;">
+                <a href="https://altkarov.github.io/emauta/" style="color: #667eea; text-decoration: none; margin: 0 10px;">Política de Privacidad</a> | 
+                <a href="https://altkarov.github.io/emauta/terms.html" style="color: #667eea; text-decoration: none; margin: 0 10px;">Términos y Condiciones</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
